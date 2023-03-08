@@ -1,0 +1,22 @@
+{
+  "name": "lab-365-fullstack-node-api",
+  "version": "1.0.0",
+  "description": "Node API para o modulo no curso fullstack",
+  "author": "Reynaldo Ariel Duarte",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+github.com/reyduar/lab-365-fullstack-node-api.git"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^2.0.21"
+  }
+}
