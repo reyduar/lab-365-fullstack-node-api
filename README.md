@@ -1,5 +1,10 @@
 # 🚀 Lab365 Fullstack Trindade - Node Express Rest API
 
+###
+
+DEMO: https://lab-365-fullstack-node-api-production.up.railway.app/
+API: https://lab-365-fullstack-node-api-production.up.railway.app/api/
+
 ### Setup
 
 ```bash
