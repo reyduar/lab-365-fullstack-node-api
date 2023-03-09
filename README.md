@@ -9,10 +9,10 @@ $ npm install
 ### Run local
 
 ```bash
-$ npm start
+$ npm run start:dev
 ```
 
-### Automatic build and deploy to Surge.sh via CircleCI
+### Automatic build and deploy to Railway
 
 ```bash
 $ git pull origin development
