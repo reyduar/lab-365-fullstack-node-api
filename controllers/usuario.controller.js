@@ -21,8 +21,9 @@ const deleteUser = (req = request, res = response) => {
   });
 };
 const updateUser = (req = request, res = response) => {
+  const { id } = req.params;
   res.json({
-    message: "PUT API usuario Controller",
+    message: `Usuário (${id}) atualizado com éxito`,
   });
 };
 

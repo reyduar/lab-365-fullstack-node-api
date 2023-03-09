@@ -7,6 +7,87 @@
     <title>Node Rest API</title>
   </head>
   <body>
-    <h1>Node Server Rest API</h1>
+    <h1>Lab365 Fullstack Trindade - Node Express Rest API</h1>
+    <h2>Server Resources</h2>
+    <hr />
+    <p>
+      <strong>Local Server:</strong>
+      <a href="http://localhost:3000/api" target="_blank"
+        >http://localhost:3000/api</a
+      >
+    </p>
+
+    <p>
+      <strong>Dev Server:</strong>
+      <a href="http://localhost:3000/api" target="_blank"
+        >http://localhost:3000/api</a
+      >
+    </p>
+    <hr />
+    <h3>Test</h3>
+    <ul>
+      <li>
+        <b>GET:</b>
+        <a href="http://localhost:3000/api/test/ex4/Ariel Duarte">
+          api/test/ex4/{name}</a
+        >
+      </li>
+      <li><b>GET:</b> api/test/</li>
+      <li>
+        <b>POST:</b> api/test/
+        <span>
+          <b>REQUEST BODY: </b>
+          <span>{ "id": number "nome": string }</span>
+        </span>
+      </li>
+      <li>
+        <b>PUT:</b>api/test/{id}
+        <span>
+          <b>REQUEST BODY: </b>
+          <span>{ "nome": string }</span>
+        </span>
+      </li>
+      <li>
+        <b>PATCH:</b>
+        api/test/{id}
+        <span>
+          <b>REQUEST BODY: </b>
+          <span>{ "nome": string }</span>
+        </span>
+      </li>
+      <li>
+        <b>DELETE:</b>
+        api/test/{id}
+      </li>
+    </ul>
+    <h3>User</h3>
+    <ul>
+      <li><b>GET:</b> api/usuario</li>
+      <li>
+        <b>POST:</b> api/usuario
+        <span>
+          <b>REQUEST BODY: </b>
+          <span
+            >{ "id": number "nome": string, "idade": number, "cargo": number
+            "senha": number }</span
+          >
+        </span>
+      </li>
+      <li>
+        <b>PUT:</b>
+        api/usuario/{id}
+        <span>
+          <b>REQUEST BODY: </b>
+          <span
+            >{ "nome": string, "idade": number, "cargo": number "senha": number
+            }</span
+          >
+        </span>
+      </li>
+      <li>
+        <b>DELETE:</b>
+        api/usuario/{id}
+      </li>
+    </ul>
   </body>
 </html>

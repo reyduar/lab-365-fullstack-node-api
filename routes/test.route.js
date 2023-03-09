@@ -18,8 +18,8 @@ router.get("/ex4/:name", (req, res) => {
 
 router.get("/", testGet);
 router.post("/", testPost);
-router.put("/", testPut);
-router.patch("/", testPatch);
-router.delete("/", testDelete);
+router.put("/:id", testPut);
+router.patch("/:id", testPatch);
+router.delete("/:id", testDelete);
 
 module.exports = router;

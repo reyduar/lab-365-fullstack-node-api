@@ -10,7 +10,7 @@ const router = new Router();
 
 router.get("/", getUsers);
 router.post("/", newUser);
-router.put("/", updateUser);
-router.delete("/", deleteUser);
+router.put("/:id", updateUser);
+router.delete("/:id", deleteUser);
 
 module.exports = router;
