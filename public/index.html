@@ -66,20 +66,20 @@
     </ul>
     <h3>User</h3>
     <ul>
-      <li><b>GET:</b> api/usuario</li>
+      <li><b>GET:</b> api/usuarios</li>
       <li>
-        <b>POST:</b> api/usuario
+        <b>POST:</b> api/usuarios
         <span>
           <b>REQUEST BODY: </b>
           <span
-            >{ "id": number "nome": string, "idade": number, "cargo": number
-            "senha": number }</span
+            >{ "nome": string, "idade": number, "cargo": number "senha": number
+            }</span
           >
         </span>
       </li>
       <li>
         <b>PUT:</b>
-        api/usuario/{id}
+        api/usuarios/{id}
         <span>
           <b>REQUEST BODY: </b>
           <span
@@ -90,7 +90,7 @@
       </li>
       <li>
         <b>DELETE:</b>
-        api/usuario/{id}
+        api/usuarios/{id}
       </li>
     </ul>
   </body>
