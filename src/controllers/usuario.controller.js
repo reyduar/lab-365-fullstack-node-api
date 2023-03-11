@@ -4,7 +4,7 @@ const { Usuario } = require("../models/usuario");
 
 const getUsers = async (req = request, res = response) => {
   const { limit = 5, skip = 0 } = req.query;
-  // Execute more faster
+
   const [total, usuarios] = await Promise.all([
     Usuario.countDocuments(),
     Usuario.find().skip(Number(skip)).limit(Number(limit)),
