@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const { dbConnection } = require("../database/config.db");
+const { swaggerDocs } = require("../utils/swagger");
 const testRoute = require("../routes/test.route");
 const usuarioRoute = require("../routes/usuario.route");
 
@@ -41,6 +42,8 @@ class Server {
   listen() {
     this.app.listen(this.port, () => {
       console.log(`Server running on port: ${this.port}`);
+      // Swagger docs
+      swaggerDocs(this.app, this.port);
     });
   }
 }
