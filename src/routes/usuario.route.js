@@ -1,6 +1,6 @@
 const { Router } = require("express");
 const { check } = require("express-validator");
-const { eUsuarioLider } = require("../middlewares/validar-cargo");
+const { eUsuarioLider } = require("../middlewares/validar-novo-usuario");
 const {
   getUsers,
   newUser,

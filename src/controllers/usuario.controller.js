@@ -18,12 +18,6 @@ const newUser = async (req = request, res = response) => {
   }
   const { nome, idade, cargo, senha } = req.body;
 
-  if (idade < 21) {
-    return res
-      .status(400)
-      .json({ message: "Usuário não possui idade suficiente" });
-  }
-
   const usuario = new Usuario({ nome, idade, cargo, senha });
   await usuario.save();
   res.status(201).json({
