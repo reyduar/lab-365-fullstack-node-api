@@ -29,10 +29,10 @@
   </body>
   <script>
     function redirec() {
-      setTimeout(() => {
-        window.location.href =
-          "https://documenter.getpostman.com/view/3891670/2s93JtPiHN";
-      }, 1000);
+      const local = "http://localhost:3000/api/docs/";
+      const dev =
+        "https://lab-365-fullstack-node-api-production.up.railway.app/api/docs/";
+      window.location.href = dev;
     }
     redirec();
   </script>

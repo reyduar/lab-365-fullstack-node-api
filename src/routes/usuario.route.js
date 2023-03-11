@@ -11,7 +11,45 @@ const {
 
 const router = new Router();
 
+/**
+ * @openapi
+ * /api/usuarios/:
+ *  get:
+ *    summary: Obter usuários
+ *    tags:
+ *        - Usuario
+ *    parameters:
+ *       - in: query
+ *         name: limit
+ *         schema:
+ *           type: number
+ *           default: 20
+ *           description: limite de usuários para obter
+ *    responses:
+ *      200:
+ *        description: OK
+ */
 router.get("/", getUsers);
+
+/**
+ * @openapi
+ * /api/usuarios/:
+ *  post:
+ *    tags:
+ *        - Usuario
+ *    summary: Criar novo usuário
+ *    requestBody:
+ *      required: true
+ *      content:
+ *        application/json:
+ *          schema:
+ *            $ref: '#/components/schemas/CriarUsuarioInput'
+ *    responses:
+ *      201:
+ *        description: Usuário criado com sucesso
+ *      406:
+ *        description: Está faltando dados para concluir a operação
+ */
 router.post(
   "/",
   [
@@ -21,6 +59,33 @@ router.post(
   ],
   newUser
 );
+
+/**
+ * @openapi
+ * /api/usuarios/{id}:
+ *  put:
+ *    tags:
+ *        - Usuario
+ *    summary: Atualizar usuário
+ *    parameters:
+ *      - name: id
+ *        in: path
+ *        description: Usuario Mongo Id Object
+ *        schema:
+ *           type: string
+ *           default: 640be68a33e01cdf3f66f74e
+ *    requestBody:
+ *      required: true
+ *      content:
+ *        application/json:
+ *          schema:
+ *            $ref: '#/components/schemas/CriarUsuarioInput'
+ *    responses:
+ *      200:
+ *        description: Usuário atualizado com sucesso
+ *      406:
+ *        description: Está faltando dados para concluir a operação
+ */
 router.put(
   "/:id",
   [
@@ -29,6 +94,27 @@ router.put(
   ],
   updateUser
 );
+
+/**
+ * @openapi
+ * /api/usuarios/{id}:
+ *  delete:
+ *    tags:
+ *        - Usuario
+ *    summary: Deletar usuário
+ *    parameters:
+ *      - name: id
+ *        in: path
+ *        description: Usuario Mongo Id Object
+ *        schema:
+ *           type: string
+ *           default: 640be68a33e01cdf3f66f74e
+ *    responses:
+ *      200:
+ *        description: Usuário deletado com sucesso
+ *      406:
+ *        description: Está faltando dados para concluir a operação
+ */
 router.delete(
   "/:id",
   [

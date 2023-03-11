@@ -60,7 +60,7 @@ const updateUser = async (req = request, res = response) => {
   const { ...rest } = req.body;
   await Usuario.findByIdAndUpdate(id, rest);
   res.status(200).json({
-    message: `Usuário (${id}) atualizado com éxito`,
+    message: `Usuário atualizado com sucesso`,
   });
 };
 
