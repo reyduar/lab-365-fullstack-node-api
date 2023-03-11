@@ -1,6 +1,7 @@
 const { Router } = require("express");
 const { check } = require("express-validator");
 const { eUsuarioLider } = require("../middlewares/validar-novo-usuario");
+const { usuarioIdExiste } = require("../middlewares/validar-id-usuario");
 const {
   getUsers,
   newUser,
@@ -20,7 +21,21 @@ router.post(
   ],
   newUser
 );
-router.put("/:id", updateUser);
-router.delete("/:id", deleteUser);
+router.put(
+  "/:id",
+  [
+    check("id", "MongoId invalido").isMongoId(),
+    check("id").custom(usuarioIdExiste),
+  ],
+  updateUser
+);
+router.delete(
+  "/:id",
+  [
+    check("id", "MongoId invalido").isMongoId(),
+    check("id").custom(usuarioIdExiste),
+  ],
+  deleteUser
+);
 
 module.exports = router;
