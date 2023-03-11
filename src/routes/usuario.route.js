@@ -1,5 +1,6 @@
 const { Router } = require("express");
 const { check } = require("express-validator");
+const { eUsuarioLider } = require("../middlewares/validar-cargo");
 const {
   getUsers,
   newUser,
@@ -12,7 +13,11 @@ const router = new Router();
 router.get("/", getUsers);
 router.post(
   "/",
-  [check("nome").isLength({ min: 5 }), check("senha").isLength({ min: 4 })],
+  [
+    eUsuarioLider,
+    check("nome").isLength({ min: 4 }),
+    check("senha").isLength({ min: 4 }),
+  ],
   newUser
 );
 router.put("/:id", updateUser);
