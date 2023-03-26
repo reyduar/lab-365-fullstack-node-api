@@ -2,8 +2,7 @@
 
 ###
 
-DEMO: https://lab-365-fullstack-node-api-production.up.railway.app/
-API: https://lab-365-fullstack-node-api-production.up.railway.app/api/
+- DEMO: https://lab-365-fullstack-node-api-production.up.railway.app
 
 ### Setup
 
