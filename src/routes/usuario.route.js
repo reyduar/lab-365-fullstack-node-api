@@ -47,8 +47,10 @@ router.get("/", getUsers);
  *    responses:
  *      201:
  *        description: Usuário criado com sucesso
- *      406:
- *        description: Está faltando dados para concluir a operação
+ *      400:
+ *        description: Só poderá salvar se o cargo do usuário for igual a 'Líder'
+ *      409:
+ *        description: Usuário não possui idade suficiente
  */
 router.post(
   "/",
